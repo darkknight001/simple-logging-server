@@ -6,7 +6,3 @@ WORKDIR /app
 
 # Install the required Python packages
 RUN pip install requests
-
-# Run the script when the container starts
-# CMD [ "python", "/app/test.py" ]
-CMD ["/bin/bash"]
