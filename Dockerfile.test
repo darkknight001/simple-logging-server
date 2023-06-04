@@ -1,0 +1,12 @@
+# Use a base Python image
+FROM python:3.9
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Install the required Python packages
+RUN pip install requests
+
+# Run the script when the container starts
+# CMD [ "python", "/app/test.py" ]
+CMD ["/bin/bash"]
