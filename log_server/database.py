@@ -52,7 +52,8 @@ class DatabaseDriver:
                 except (psycopg2.DatabaseError, psycopg2.OperationalError) as error:
                     self.conn.rollback()
                     return
-                
-                os.remove(LOG_FILE_PATH)
+ 
+                if os.path.isfile(LOG_FILE_PATH):
+                    os.remove(LOG_FILE_PATH)
 
 
