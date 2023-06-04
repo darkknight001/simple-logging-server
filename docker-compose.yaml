@@ -18,9 +18,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.app
-    command: bash -c "python /scripts/wait_for_db.py && gunicorn -w 2 -b 0.0.0.0:8000 wsgi:app"
+    command: bash -c "python /scripts/wait_for_db.py && gunicorn -w 2 -b 0.0.0.0:5000 wsgi:app"
     ports:
-      - 8000:8000
+      - 5000:5000
     depends_on:
       - db
 

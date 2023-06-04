@@ -5,7 +5,7 @@ import time
 import threading
 import random
 
-url = "http://webserver:8000/log"
+url = "http://webserver:5000/log"
 
 EVENT_CHOICES = ["logout", "login", "some_event"]
 
